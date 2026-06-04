@@ -682,3 +682,191 @@ a{color:inherit;text-decoration:none}.section-shell{width:var(--container);margi
   .floating-whatsapp{transition:none;}
   .floating-whatsapp:hover{transform:none;}
 }
+
+
+/* === Patch contenuti Michela - stato attuale === */
+:root{
+  --brand-brown:#7b5748;
+  --brand-brown-dark:#5f3f34;
+}
+.brand-signature span{
+  color:var(--brand-brown);
+}
+.brand-signature:hover span{
+  color:var(--brand-brown-dark);
+}
+.hero .eyebrow{
+  color:var(--brand-brown);
+}
+.hero h1{
+  max-width:860px;
+}
+.hero .lead{
+  max-width:650px;
+  font-size:clamp(18px,1.7vw,22px);
+}
+.hero-meta-circles{
+  align-items:center;
+  gap:10px;
+  margin:32px 0;
+}
+.hero-meta-circles span{
+  min-height:58px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  border-radius:999px;
+  padding:11px 17px;
+  background:rgba(251,247,241,.58);
+  border:1px solid rgba(123,87,72,.18);
+  color:rgba(36,29,21,.76);
+  box-shadow:0 12px 34px rgba(36,29,21,.055);
+}
+.hero-meta-circles span:nth-child(3),
+.hero-meta-circles span:nth-child(4){
+  padding-inline:19px;
+}
+.cards-grid-single{
+  grid-template-columns:minmax(0,760px);
+  justify-content:center;
+}
+.service-card-online{
+  min-height:0;
+  padding:clamp(30px,4vw,48px);
+  border-radius:38px;
+  background:linear-gradient(135deg,rgba(251,247,241,.78),rgba(230,221,209,.46));
+  position:relative;
+  overflow:hidden;
+}
+.service-card-online::after{
+  content:"";
+  position:absolute;
+  right:-90px;
+  bottom:-120px;
+  width:280px;
+  height:280px;
+  border-radius:50%;
+  background:rgba(174,142,123,.16);
+  pointer-events:none;
+}
+.service-card-online h3{
+  margin-top:34px;
+  font-size:clamp(42px,5vw,68px);
+}
+.service-card-online p{
+  max-width:620px;
+  font-size:17px;
+  line-height:1.75;
+  position:relative;
+  z-index:1;
+}
+.contact-simple-copy h2{
+  color:var(--brand-brown-dark);
+}
+.contact-note span{
+  color:var(--brand-brown);
+}
+.contact-channels{
+  gap:12px;
+}
+.channel-card strong{
+  word-break:normal;
+}
+.channel-card[href*="instagram"] strong{
+  font-family:var(--sans);
+  font-size:clamp(18px,1.8vw,24px);
+  font-weight:800;
+  letter-spacing:-.015em;
+  line-height:1.15;
+}
+.footer-kicker,
+.footer-links a[href*="instagram"]{
+  color:var(--brand-brown);
+}
+@media (max-width:980px){
+  .contact-channels{grid-template-columns:repeat(2,1fr);}
+  .hero-meta-circles span{min-height:54px;}
+}
+@media (max-width:720px){
+  .contact-channels{grid-template-columns:1fr;}
+  .hero-meta-circles{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:9px;
+  }
+  .hero-meta-circles span{
+    min-height:48px;
+    justify-content:flex-start;
+    text-align:left;
+    border-radius:18px;
+  }
+  .cards-grid-single{grid-template-columns:1fr;}
+  .service-card-online h3{font-size:42px;}
+}
+
+
+/* Patch: remove sezione Metodo/statement and make Percorsi the first explanatory block */
+.feature-band{
+  margin-top: clamp(18px, 3vw, 42px);
+}
+.cards-section{
+  padding-top: clamp(74px, 8vw, 118px);
+}
+.site-nav a[href="#metodo"],
+.footer-links a[href="#metodo"]{
+  display:none;
+}
+.service-card-online{
+  padding-top: clamp(32px,4.2vw,54px);
+}
+.service-card-online h3{
+  margin-top: 10px;
+}
+.online-kicker{
+  margin:0 0 18px;
+  position:relative;
+  z-index:1;
+  font-size:11px !important;
+  font-weight:850;
+  text-transform:uppercase;
+  letter-spacing:.22em;
+  color:var(--brand-brown) !important;
+}
+.online-note{
+  position:relative;
+  z-index:1;
+  margin-top:26px;
+  padding:22px 24px;
+  border-radius:26px;
+  border:1px solid rgba(123,87,72,.16);
+  background:rgba(251,247,241,.56);
+  display:grid;
+  gap:6px;
+  max-width:640px;
+}
+.online-note strong{
+  font-family:var(--serif);
+  font-size:clamp(27px,3vw,40px);
+  line-height:1;
+  font-weight:500;
+  letter-spacing:-.025em;
+  color:var(--ink);
+}
+.online-note span{
+  color:rgba(36,29,21,.64);
+  font-size:15px;
+  line-height:1.65;
+}
+.contact-simple-copy{
+  min-height:auto;
+  justify-content:center;
+}
+.contact-simple-copy > p:not(.eyebrow){
+  margin-bottom:0;
+}
+@media (max-width:720px){
+  .cards-section{padding-top:64px;}
+  .online-note{padding:19px 20px;border-radius:22px;}
+  .service-card-online h3{font-size:44px;}
+}
