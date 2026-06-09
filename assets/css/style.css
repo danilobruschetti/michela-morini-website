@@ -1424,3 +1424,130 @@ a{color:inherit;text-decoration:none}.section-shell{width:var(--container);margi
   .training-tags{display:grid;grid-template-columns:1fr;gap:9px;}
   .training-tags li{border-radius:16px;}
 }
+
+/* === Patch contatti: card uniformi, font coerente e valori su una riga === */
+.contact-polished{
+  grid-template-columns:minmax(260px,.68fr) minmax(0,1.32fr);
+  align-items:center;
+}
+.contact-channels-polished{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:11px;
+}
+.contact-channels-polished .channel-card,
+.contact-channels-polished .channel-wide{
+  grid-column:auto;
+  min-height:96px;
+  padding:20px 24px;
+  border-radius:28px;
+  display:grid;
+  grid-template-columns:minmax(112px,.34fr) minmax(0,1fr);
+  grid-template-rows:auto auto;
+  column-gap:20px;
+  row-gap:4px;
+  align-items:center;
+  align-content:center;
+}
+.contact-channels-polished .channel-card span{
+  grid-column:1;
+  grid-row:1 / span 2;
+  align-self:center;
+  margin:0;
+}
+.contact-channels-polished .channel-card strong{
+  grid-column:2;
+  grid-row:1;
+  align-self:end;
+  font-family:var(--serif) !important;
+  font-size:clamp(27px,2.45vw,39px) !important;
+  font-weight:500 !important;
+  line-height:.98 !important;
+  letter-spacing:-.035em !important;
+  color:var(--ink);
+  white-space:nowrap;
+  overflow-wrap:normal;
+  word-break:normal;
+}
+.contact-channels-polished .channel-card small{
+  grid-column:2;
+  grid-row:2;
+  margin:0;
+  line-height:1.45;
+}
+.contact-channels-polished .channel-primary{
+  min-height:112px;
+  grid-template-columns:minmax(112px,.34fr) minmax(0,1fr);
+}
+.contact-channels-polished .channel-primary strong,
+.contact-channels-polished .channel-primary small{
+  color:var(--paper);
+}
+.contact-channels-polished .channel-value-compact,
+.contact-channels-polished .channel-value-mail,
+.contact-channels-polished .channel-value-social,
+.channel-card[href^="mailto:"] strong,
+.channel-card[href*="instagram"] strong{
+  font-family:var(--serif) !important;
+  font-size:clamp(24px,2.1vw,32px) !important;
+  font-weight:500 !important;
+  line-height:1 !important;
+  letter-spacing:-.04em !important;
+  white-space:nowrap;
+  overflow-wrap:normal;
+  word-break:normal;
+}
+@media (max-width:980px){
+  .contact-polished{grid-template-columns:1fr;}
+  .contact-channels-polished{grid-template-columns:1fr;}
+}
+@media (max-width:620px){
+  .contact-channels-polished .channel-card,
+  .contact-channels-polished .channel-wide,
+  .contact-channels-polished .channel-primary{
+    min-height:112px;
+    padding:20px;
+    border-radius:24px;
+    grid-template-columns:1fr;
+    grid-template-rows:auto auto auto;
+    gap:5px;
+  }
+  .contact-channels-polished .channel-card span,
+  .contact-channels-polished .channel-card strong,
+  .contact-channels-polished .channel-card small{
+    grid-column:1;
+    grid-row:auto;
+  }
+  .contact-channels-polished .channel-card strong{
+    font-size:clamp(27px,8vw,36px) !important;
+  }
+  .contact-channels-polished .channel-value-mail,
+  .contact-channels-polished .channel-value-social,
+  .channel-card[href^="mailto:"] strong,
+  .channel-card[href*="instagram"] strong{
+    font-size:clamp(18px,5.35vw,25px) !important;
+  }
+}
+@media (max-width:380px){
+  .contact-channels-polished .channel-value-mail,
+  .contact-channels-polished .channel-value-social,
+  .channel-card[href^="mailto:"] strong,
+  .channel-card[href*="instagram"] strong{
+    font-size:17px !important;
+  }
+}
+/* Fix numero telefono nei contatti: più ordinato e leggibile */
+.contact-channels .channel-card[href^="tel"] strong{
+  font-family: var(--serif);
+  font-variant-numeric: lining-nums tabular-nums;
+  font-feature-settings: "lnum" 1, "tnum" 1;
+  letter-spacing: -0.015em;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+@media (max-width: 720px){
+  .contact-channels .channel-card[href^="tel"] strong{
+    font-size: 34px;
+  }
+}
