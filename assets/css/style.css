@@ -3842,3 +3842,132 @@ a{color:inherit;text-decoration:none}.section-shell{width:var(--container);margi
     flex: 0 0 auto;
   }
 }
+
+@media (max-width: 620px){
+  .hero{
+    position: relative;
+    padding-top: 34px;
+  }
+
+  .hero-copy{
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero h1{
+    font-size: clamp(46px, 12.6vw, 51px) !important;
+    line-height: .96;
+    max-width: 92%;
+  }
+
+  .hero .lead{
+    margin-top: 20px;
+    font-size: 15.5px;
+    line-height: 1.68;
+    max-width: 96%;
+  }
+
+  .hero-meta-circles{
+    margin-top: 24px;
+  }
+
+  .hero-visual{
+    position: absolute;
+    top: 112px;
+    right: -44px;
+    width: 190px;
+    height: 250px;
+    min-height: 0 !important;
+    margin: 0;
+    z-index: 1;
+    opacity: .42;
+    pointer-events: none;
+  }
+
+  .hero-visual .logo-tile,
+  .hero-visual .profile-orbit{
+    display: none;
+  }
+
+  .hero-visual .studio-card{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 999px;
+    box-shadow: none;
+  }
+
+  .hero-visual .studio-card img{
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 620px){
+  .hero-visual{
+    right: -66px;
+    opacity: .30;
+    -webkit-mask-image: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(0,0,0,.15) 24%,
+      #000 58%
+    );
+    mask-image: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(0,0,0,.15) 24%,
+      #000 58%
+    );
+  }
+
+  .hero h1,
+  .hero .lead{
+    position: relative;
+    z-index: 3;
+  }
+}
+
+#chisono .about-lead{
+  font-size: clamp(22px, 2.15vw, 32px) !important;
+  line-height: 1.16 !important;
+  margin-bottom: 16px !important;
+  max-width: 640px !important;
+}
+
+#chisono .about-quote{
+  font-size: clamp(18px, 1.75vw, 25px) !important;
+  line-height: 1.24 !important;
+  padding: 15px 18px !important;
+  margin-top: 11px !important;
+  border-radius: 20px !important;
+}
+
+#chisono .about-pillars{
+  margin-top: 16px !important;
+  margin-bottom: 13px !important;
+}
+
+#chisono .about-disclosures{
+  margin-top: 12px !important;
+  gap: 8px !important;
+}
+
+@media (max-width: 620px){
+  #chisono .about-lead{
+    font-size: clamp(21px, 6.1vw, 27px) !important;
+    line-height: 1.18 !important;
+    margin-bottom: 14px !important;
+  }
+
+  #chisono .about-quote{
+    font-size: clamp(18px, 5.1vw, 22px) !important;
+    line-height: 1.26 !important;
+    padding: 14px 16px !important;
+  }
+
+  #chisono .about-pillars{
+    margin-top: 14px !important;
+    gap: 8px !important;
+  }
+}
