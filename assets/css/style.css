@@ -4071,3 +4071,23 @@ a{color:inherit;text-decoration:none}.section-shell{width:var(--container);margi
     font-size: 21px !important;
   }
 }
+/* Minimal patch: footer link uniformi */
+.site-footer .footer-links a,
+.site-footer .footer-links a:visited{
+  color: rgba(83, 57, 44, .88) !important;
+  background: rgba(255, 250, 243, .34) !important;
+  border-color: rgba(83, 57, 44, .08) !important;
+  opacity: 1 !important;
+}
+
+.site-footer .footer-links a:hover{
+  color: rgba(83, 57, 44, 1) !important;
+  background: rgba(255, 250, 243, .48) !important;
+}
+
+/* Privacy e Cookie un filo più discreti */
+.site-footer .footer-links a[href*="privacy"],
+.site-footer .footer-links a[href*="cookie"]{
+  color: rgba(83, 57, 44, .58) !important;
+  background: rgba(255, 250, 243, .24) !important;
+}
