@@ -1571,3 +1571,2029 @@ a{color:inherit;text-decoration:none}.section-shell{width:var(--container);margi
     font-size: 24px !important;
   }
 }
+/* === Fine tuning leggero: sezioni citazione e contatti più compatte/raffinate === */
+.quote-section{
+  padding: clamp(54px, 6vw, 76px) 0 clamp(48px, 5vw, 66px);
+}
+.quote-inner{
+  max-width: 960px;
+  border-radius: 34px;
+  padding: clamp(34px, 5vw, 58px) clamp(26px, 7vw, 70px);
+  background: linear-gradient(135deg, rgba(251,247,241,.76), rgba(230,221,209,.52));
+  border: 1px solid rgba(36,29,21,.10);
+  box-shadow: 0 20px 52px rgba(36,29,21,.075);
+  color: var(--ink);
+}
+.quote-inner p{
+  max-width: 780px;
+  margin-inline: auto;
+  color: rgba(36,29,21,.86);
+  font-size: clamp(36px, 4.7vw, 64px);
+  line-height: 1.02;
+  letter-spacing: -.038em;
+}
+
+.contact{
+  padding-bottom: clamp(64px, 7vw, 86px);
+}
+.contact-polished{
+  grid-template-columns: minmax(240px,.6fr) minmax(0,1fr);
+  gap: clamp(24px,4vw,52px);
+  padding: clamp(26px,4.5vw,48px);
+  border-radius: 36px;
+  background: linear-gradient(135deg, rgba(251,247,241,.68), rgba(230,221,209,.42));
+  border: 1px solid rgba(36,29,21,.09);
+  box-shadow: 0 22px 62px rgba(36,29,21,.08);
+}
+.contact-panel-simple::before,
+.contact-panel-simple::after{
+  opacity: .38;
+}
+.contact-headline h2{
+  font-size: clamp(46px,5.2vw,72px);
+  line-height: .98;
+  letter-spacing: -.04em;
+}
+.contact-headline p:not(.eyebrow){
+  max-width: 390px;
+  font-size: 16px;
+  line-height: 1.72;
+  color: rgba(36,29,21,.66);
+}
+.contact-channels-polished{
+  gap: 9px;
+}
+.contact-channels-polished .channel-card,
+.contact-channels-polished .channel-wide,
+.contact-channels-polished .channel-primary{
+  min-height: 84px;
+  padding: 16px 20px;
+  border-radius: 24px;
+  column-gap: 18px;
+  background: rgba(251,247,241,.55);
+  border-color: rgba(36,29,21,.085);
+  box-shadow: 0 12px 30px rgba(36,29,21,.045);
+}
+.contact-channels-polished .channel-primary{
+  min-height: 92px;
+  background: linear-gradient(135deg, rgba(95,63,52,.92), rgba(36,29,21,.86));
+  box-shadow: 0 14px 34px rgba(36,29,21,.12);
+}
+.contact-channels-polished .channel-card span{
+  font-size: 11px;
+  letter-spacing: .18em;
+  color: rgba(123,87,72,.72);
+}
+.contact-channels-polished .channel-primary span{
+  color: rgba(251,247,241,.72);
+}
+.contact-channels-polished .channel-card strong{
+  font-size: clamp(24px,2vw,31px) !important;
+  line-height: 1.02 !important;
+  letter-spacing: -.035em !important;
+}
+.contact-channels-polished .channel-primary strong{
+  font-size: clamp(28px,2.4vw,36px) !important;
+}
+.contact-channels-polished .channel-card small{
+  font-size: 13px;
+  line-height: 1.35;
+  color: rgba(36,29,21,.55);
+}
+.contact-channels-polished .channel-primary small{
+  color: rgba(251,247,241,.78);
+}
+.contact-channels-polished .channel-value-compact,
+.contact-channels-polished .channel-value-mail,
+.contact-channels-polished .channel-value-social,
+.channel-card[href^="mailto:"] strong,
+.channel-card[href*="instagram"] strong{
+  font-size: clamp(20px,1.65vw,27px) !important;
+  letter-spacing: -.035em !important;
+  max-width: 100%;
+}
+.contact-channels-polished .channel-card[href^="tel"] strong{
+  font-size: clamp(20px,1.65vw,27px) !important;
+  letter-spacing: -.025em !important;
+}
+
+@media (max-width: 980px){
+  .contact-polished{
+    grid-template-columns: 1fr;
+  }
+  .contact-headline p:not(.eyebrow){
+    max-width: 620px;
+  }
+}
+@media (max-width: 620px){
+  .quote-section{
+    padding: 44px 0 42px;
+  }
+  .quote-inner{
+    border-radius: 26px;
+    padding: 30px 22px;
+  }
+  .quote-inner p{
+    font-size: clamp(32px,9.2vw,42px);
+    line-height: 1.04;
+  }
+  .contact-polished{
+    padding: 22px;
+    border-radius: 28px;
+  }
+  .contact-headline h2{
+    font-size: clamp(42px,12vw,50px);
+  }
+  .contact-headline p:not(.eyebrow){
+    font-size: 15px;
+    line-height: 1.68;
+  }
+  .contact-channels-polished .channel-card,
+  .contact-channels-polished .channel-wide,
+  .contact-channels-polished .channel-primary{
+    min-height: 92px;
+    padding: 17px 18px;
+    border-radius: 21px;
+  }
+  .contact-channels-polished .channel-card strong,
+  .contact-channels-polished .channel-primary strong{
+    font-size: clamp(25px,7.5vw,32px) !important;
+  }
+  .contact-channels-polished .channel-value-mail,
+  .contact-channels-polished .channel-value-social,
+  .channel-card[href^="mailto:"] strong,
+  .channel-card[href*="instagram"] strong{
+    font-size: clamp(16.5px,4.75vw,22px) !important;
+  }
+  .contact-channels-polished .channel-card[href^="tel"] strong{
+    font-size: clamp(18px,5.4vw,23px) !important;
+  }
+}
+@media (max-width: 380px){
+  .contact-polished{
+    padding: 18px;
+  }
+  .contact-channels-polished .channel-value-mail,
+  .contact-channels-polished .channel-value-social,
+  .channel-card[href^="mailto:"] strong,
+  .channel-card[href*="instagram"] strong{
+    font-size: 15.5px !important;
+  }
+}
+
+/* === Contatti: versione più compatta, uniforme e professionale === */
+#contatti.contact{
+  padding-bottom: clamp(56px, 6vw, 78px);
+}
+
+#contatti .contact-polished{
+  max-width: 960px;
+  margin-inline: auto;
+  grid-template-columns: minmax(220px, .48fr) minmax(0, .92fr);
+  gap: clamp(22px, 3.8vw, 42px);
+  align-items: center;
+  padding: clamp(24px, 3.8vw, 40px);
+  border-radius: 32px;
+  background: linear-gradient(135deg, rgba(251,247,241,.72), rgba(230,221,209,.38));
+  border: 1px solid rgba(36,29,21,.085);
+  box-shadow: 0 18px 48px rgba(36,29,21,.075);
+}
+
+#contatti .contact-panel-simple::before,
+#contatti .contact-panel-simple::after{
+  opacity: .18;
+}
+
+#contatti .contact-headline .eyebrow{
+  margin-bottom: 12px;
+}
+
+#contatti .contact-headline h2{
+  max-width: 360px;
+  margin-bottom: 18px;
+  font-size: clamp(42px, 4.6vw, 62px);
+  line-height: .96;
+  letter-spacing: -.045em;
+}
+
+#contatti .contact-headline p:not(.eyebrow){
+  max-width: 335px;
+  font-size: 15px;
+  line-height: 1.66;
+  color: rgba(36,29,21,.62);
+}
+
+#contatti .contact-channels-polished{
+  gap: 0;
+  overflow: hidden;
+  border-radius: 24px;
+  background: rgba(251,247,241,.48);
+  border: 1px solid rgba(36,29,21,.085);
+  box-shadow: 0 12px 34px rgba(36,29,21,.045);
+}
+
+#contatti .contact-channels-polished .channel-card,
+#contatti .contact-channels-polished .channel-wide,
+#contatti .contact-channels-polished .channel-primary{
+  min-height: 68px !important;
+  padding: 13px 18px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  border-bottom: 1px solid rgba(36,29,21,.075) !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  transform: none !important;
+  display: grid;
+  grid-template-columns: 112px minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  column-gap: 18px;
+  row-gap: 1px;
+  align-items: center;
+  align-content: center;
+}
+
+#contatti .contact-channels-polished .channel-card:last-child{
+  border-bottom: 0 !important;
+}
+
+#contatti .contact-channels-polished .channel-card:hover,
+#contatti .contact-channels-polished .channel-primary:hover{
+  background: rgba(251,247,241,.52) !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+#contatti .contact-channels-polished .channel-card span{
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  align-self: center;
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: .18em;
+  color: rgba(123,87,72,.68) !important;
+}
+
+#contatti .contact-channels-polished .channel-card strong,
+#contatti .contact-channels-polished .channel-primary strong{
+  grid-column: 2;
+  grid-row: 1;
+  align-self: end;
+  margin: 0;
+  font-family: var(--serif) !important;
+  font-size: clamp(20px, 1.72vw, 26px) !important;
+  font-weight: 500 !important;
+  line-height: 1.05 !important;
+  letter-spacing: -.035em !important;
+  color: rgba(36,29,21,.90) !important;
+  white-space: nowrap;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+#contatti .contact-channels-polished .channel-card small,
+#contatti .contact-channels-polished .channel-primary small{
+  grid-column: 2;
+  grid-row: 2;
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.35;
+  color: rgba(36,29,21,.52) !important;
+}
+
+#contatti .contact-channels-polished .channel-value-compact,
+#contatti .contact-channels-polished .channel-value-mail,
+#contatti .contact-channels-polished .channel-value-social,
+#contatti .contact-channels-polished .channel-card[href^="tel"] strong,
+#contatti .contact-channels-polished .channel-card[href^="mailto:"] strong,
+#contatti .contact-channels-polished .channel-card[href*="instagram"] strong{
+  font-size: clamp(18px, 1.45vw, 23px) !important;
+  letter-spacing: -.028em !important;
+}
+
+#contatti .contact-channels-polished .channel-card[href^="tel"] strong{
+  font-variant-numeric: lining-nums tabular-nums;
+  font-feature-settings: "lnum" 1, "tnum" 1;
+}
+
+@media (max-width: 980px){
+  #contatti .contact-polished{
+    max-width: 780px;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  #contatti .contact-headline h2{
+    max-width: 520px;
+  }
+
+  #contatti .contact-headline p:not(.eyebrow){
+    max-width: 610px;
+  }
+}
+
+@media (max-width: 620px){
+  #contatti.contact{
+    padding-bottom: 62px;
+  }
+
+  #contatti .contact-polished{
+    padding: 20px;
+    border-radius: 26px;
+    gap: 20px;
+  }
+
+  #contatti .contact-headline h2{
+    margin-bottom: 14px;
+    font-size: clamp(40px, 11vw, 48px);
+  }
+
+  #contatti .contact-headline p:not(.eyebrow){
+    font-size: 14.5px;
+    line-height: 1.62;
+  }
+
+  #contatti .contact-channels-polished{
+    border-radius: 20px;
+  }
+
+  #contatti .contact-channels-polished .channel-card,
+  #contatti .contact-channels-polished .channel-wide,
+  #contatti .contact-channels-polished .channel-primary{
+    min-height: 76px !important;
+    padding: 14px 16px !important;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 2px;
+  }
+
+  #contatti .contact-channels-polished .channel-card span,
+  #contatti .contact-channels-polished .channel-card strong,
+  #contatti .contact-channels-polished .channel-card small{
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  #contatti .contact-channels-polished .channel-card strong,
+  #contatti .contact-channels-polished .channel-primary strong{
+    font-size: clamp(21px, 6.2vw, 28px) !important;
+  }
+
+  #contatti .contact-channels-polished .channel-value-compact,
+  #contatti .contact-channels-polished .channel-value-mail,
+  #contatti .contact-channels-polished .channel-value-social,
+  #contatti .contact-channels-polished .channel-card[href^="tel"] strong,
+  #contatti .contact-channels-polished .channel-card[href^="mailto:"] strong,
+  #contatti .contact-channels-polished .channel-card[href*="instagram"] strong{
+    font-size: clamp(14.5px, 4.35vw, 18px) !important;
+  }
+}
+
+/* === Refinement 2026-06: contatti e percorsi più compatti, leggeri e omogenei === */
+:root{
+  --fine-border: rgba(36,29,21,.085);
+  --fine-text: rgba(36,29,21,.68);
+  --fine-muted: rgba(36,29,21,.50);
+}
+
+/* Riduce leggermente il tono dei titoli interni senza toccare l'hero. */
+.statement-refined h2,
+#percorsi .center-heading h2,
+.gallery-head h2,
+.reviews .center-heading h2,
+#contatti .contact-headline h2{
+  letter-spacing: -.038em;
+}
+
+/* Percorsi: meno altezza, meno effetto card, più editoriale. */
+#percorsi.cards-section{
+  padding-top: clamp(60px, 7vw, 78px) !important;
+  padding-bottom: clamp(58px, 7vw, 78px) !important;
+}
+
+#percorsi .center-heading{
+  max-width: 660px;
+  margin-bottom: 24px !important;
+}
+
+#percorsi .center-heading .eyebrow{
+  margin-bottom: 10px;
+}
+
+#percorsi .center-heading h2{
+  font-size: clamp(34px, 4.1vw, 56px) !important;
+  line-height: .98;
+}
+
+#percorsi .path-insight{
+  max-width: 720px;
+  margin: 0 auto 24px !important;
+  padding: 18px 24px !important;
+  border-radius: 24px !important;
+  background: rgba(251,247,241,.46) !important;
+  border: 1px solid var(--fine-border) !important;
+  box-shadow: 0 10px 30px rgba(36,29,21,.045) !important;
+  text-align: left !important;
+  display: grid;
+  grid-template-columns: minmax(190px,.48fr) minmax(0,1fr);
+  gap: 18px;
+  align-items: center;
+}
+
+#percorsi .path-insight strong{
+  font-size: clamp(25px, 2.5vw, 34px) !important;
+  line-height: 1.02 !important;
+  letter-spacing: -.028em;
+}
+
+#percorsi .path-insight p{
+  margin: 0 !important;
+  font-size: 14.5px !important;
+  line-height: 1.55 !important;
+  color: var(--fine-text) !important;
+}
+
+#percorsi .cards-grid-priority{
+  gap: 12px !important;
+}
+
+#percorsi .cards-grid-priority .service-card{
+  min-height: 238px !important;
+  padding: 22px 20px !important;
+  border-radius: 24px !important;
+  background: rgba(251,247,241,.50) !important;
+  border-color: var(--fine-border) !important;
+  box-shadow: 0 12px 34px rgba(36,29,21,.05) !important;
+}
+
+#percorsi .cards-grid-priority .service-card span{
+  font-size: 10.5px !important;
+  letter-spacing: .17em !important;
+  color: rgba(123,87,72,.70) !important;
+}
+
+#percorsi .cards-grid-priority .service-card .online-kicker{
+  margin-top: 10px !important;
+  font-size: 10.5px !important;
+  letter-spacing: .18em !important;
+  color: rgba(123,87,72,.74) !important;
+}
+
+#percorsi .cards-grid-priority .service-card h3,
+#percorsi .cards-grid-priority .service-card-online h3{
+  margin: 24px 0 10px !important;
+  font-size: clamp(27px, 2.35vw, 36px) !important;
+  line-height: .98 !important;
+  letter-spacing: -.028em !important;
+}
+
+#percorsi .cards-grid-priority .service-card p:not(.online-kicker){
+  font-size: 14px !important;
+  line-height: 1.52 !important;
+  color: var(--fine-text) !important;
+}
+
+/* Contatti: lista compatta, unificata, con numero WhatsApp/telefono più leggibile. */
+#contatti.contact{
+  padding-top: 0 !important;
+  padding-bottom: clamp(48px, 6vw, 68px) !important;
+}
+
+#contatti .contact-polished{
+  max-width: 880px !important;
+  grid-template-columns: minmax(210px,.46fr) minmax(0,.88fr) !important;
+  gap: clamp(20px, 3vw, 34px) !important;
+  padding: clamp(22px, 3vw, 32px) !important;
+  border-radius: 28px !important;
+  background: linear-gradient(135deg, rgba(251,247,241,.66), rgba(230,221,209,.30)) !important;
+  border: 1px solid rgba(36,29,21,.075) !important;
+  box-shadow: 0 14px 38px rgba(36,29,21,.055) !important;
+}
+
+#contatti .contact-panel-simple::before,
+#contatti .contact-panel-simple::after{
+  opacity: .10 !important;
+}
+
+#contatti .contact-headline h2{
+  max-width: 320px !important;
+  margin-bottom: 14px !important;
+  font-size: clamp(36px, 3.9vw, 52px) !important;
+  line-height: .98 !important;
+}
+
+#contatti .contact-headline p:not(.eyebrow){
+  max-width: 315px !important;
+  font-size: 14px !important;
+  line-height: 1.58 !important;
+  color: var(--fine-text) !important;
+}
+
+#contatti .contact-channels-polished{
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 0 !important;
+  overflow: hidden !important;
+  border-radius: 20px !important;
+  background: rgba(251,247,241,.44) !important;
+  border: 1px solid var(--fine-border) !important;
+  box-shadow: 0 10px 26px rgba(36,29,21,.035) !important;
+}
+
+#contatti .contact-channels-polished .channel-card,
+#contatti .contact-channels-polished .channel-wide,
+#contatti .contact-channels-polished .channel-primary{
+  min-height: 58px !important;
+  padding: 11px 16px !important;
+  border: 0 !important;
+  border-bottom: 1px solid rgba(36,29,21,.07) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  transform: none !important;
+  display: grid !important;
+  grid-template-columns: 96px minmax(0, 1fr) !important;
+  grid-template-rows: auto auto !important;
+  column-gap: 16px !important;
+  row-gap: 0 !important;
+  align-items: center !important;
+  align-content: center !important;
+}
+
+#contatti .contact-channels-polished .channel-card:last-child{
+  border-bottom: 0 !important;
+}
+
+#contatti .contact-channels-polished .channel-card:hover,
+#contatti .contact-channels-polished .channel-primary:hover{
+  background: rgba(255,255,255,.22) !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+#contatti .contact-channels-polished .channel-card span{
+  grid-column: 1 !important;
+  grid-row: 1 / span 2 !important;
+  align-self: center !important;
+  font-size: 9.5px !important;
+  font-weight: 850 !important;
+  letter-spacing: .17em !important;
+  color: rgba(123,87,72,.66) !important;
+}
+
+#contatti .contact-channels-polished .channel-card strong,
+#contatti .contact-channels-polished .channel-primary strong{
+  grid-column: 2 !important;
+  grid-row: 1 !important;
+  align-self: end !important;
+  margin: 0 !important;
+  font-family: var(--serif) !important;
+  font-size: clamp(18px, 1.42vw, 22px) !important;
+  font-weight: 500 !important;
+  line-height: 1.06 !important;
+  letter-spacing: -.028em !important;
+  color: rgba(36,29,21,.88) !important;
+  white-space: nowrap !important;
+}
+
+#contatti .contact-channels-polished .channel-card small,
+#contatti .contact-channels-polished .channel-primary small{
+  grid-column: 2 !important;
+  grid-row: 2 !important;
+  margin: 2px 0 0 !important;
+  font-size: 11.5px !important;
+  line-height: 1.3 !important;
+  color: var(--fine-muted) !important;
+}
+
+#contatti .contact-channels-polished .channel-primary strong,
+#contatti .contact-channels-polished .channel-value-phone,
+#contatti .contact-channels-polished .channel-card[href^="tel"] strong{
+  font-size: clamp(18px, 1.36vw, 21px) !important;
+  font-variant-numeric: lining-nums tabular-nums !important;
+  font-feature-settings: "lnum" 1, "tnum" 1 !important;
+  letter-spacing: -.018em !important;
+}
+
+#contatti .contact-channels-polished .channel-value-mail,
+#contatti .contact-channels-polished .channel-value-social,
+#contatti .contact-channels-polished .channel-card[href^="mailto:"] strong,
+#contatti .contact-channels-polished .channel-card[href*="instagram"] strong{
+  font-size: clamp(16px, 1.25vw, 20px) !important;
+  letter-spacing: -.018em !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+#contatti .channel-value-phone i{
+  display: inline-flex;
+  width: 23px;
+  height: 23px;
+  margin-right: 7px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid rgba(123,87,72,.22);
+  background: rgba(251,247,241,.58);
+  color: rgba(123,87,72,.80);
+  font-family: var(--sans);
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 850;
+  letter-spacing: .02em;
+  vertical-align: 2px;
+}
+
+#contatti .channel-primary .channel-value-phone i{
+  background: rgba(123,87,72,.10);
+}
+
+@media (max-width: 980px){
+  #percorsi .cards-grid-priority{
+    grid-template-columns: repeat(2, minmax(0,1fr)) !important;
+  }
+  #contatti .contact-polished{
+    max-width: 760px !important;
+    grid-template-columns: 1fr !important;
+  }
+  #contatti .contact-headline h2,
+  #contatti .contact-headline p:not(.eyebrow){
+    max-width: 560px !important;
+  }
+}
+
+@media (max-width: 700px){
+  #percorsi .path-insight{
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+    text-align: left !important;
+  }
+  #percorsi .cards-grid-priority{
+    grid-template-columns: 1fr !important;
+  }
+  #percorsi .cards-grid-priority .service-card{
+    min-height: 0 !important;
+  }
+}
+
+@media (max-width: 620px){
+  #percorsi.cards-section{
+    padding-top: 46px !important;
+    padding-bottom: 52px !important;
+  }
+  #percorsi .center-heading{
+    margin-bottom: 18px !important;
+  }
+  #percorsi .center-heading h2{
+    font-size: clamp(32px, 9.2vw, 42px) !important;
+  }
+  #percorsi .path-insight{
+    padding: 16px 18px !important;
+    border-radius: 20px !important;
+    margin-bottom: 16px !important;
+  }
+  #percorsi .path-insight strong{
+    font-size: 26px !important;
+  }
+  #percorsi .path-insight p{
+    font-size: 14px !important;
+  }
+  #percorsi .cards-grid-priority .service-card{
+    padding: 18px !important;
+    border-radius: 20px !important;
+  }
+  #percorsi .cards-grid-priority .service-card h3,
+  #percorsi .cards-grid-priority .service-card-online h3{
+    margin-top: 14px !important;
+    font-size: 30px !important;
+  }
+
+  #contatti.contact{
+    padding-bottom: 52px !important;
+  }
+  #contatti .contact-polished{
+    padding: 18px !important;
+    border-radius: 24px !important;
+    gap: 16px !important;
+  }
+  #contatti .contact-headline .eyebrow{
+    margin-bottom: 8px !important;
+  }
+  #contatti .contact-headline h2{
+    margin-bottom: 10px !important;
+    font-size: clamp(34px, 10vw, 42px) !important;
+  }
+  #contatti .contact-headline p:not(.eyebrow){
+    font-size: 13.8px !important;
+    line-height: 1.55 !important;
+  }
+  #contatti .contact-channels-polished{
+    border-radius: 18px !important;
+  }
+  #contatti .contact-channels-polished .channel-card,
+  #contatti .contact-channels-polished .channel-wide,
+  #contatti .contact-channels-polished .channel-primary{
+    min-height: 66px !important;
+    padding: 12px 14px !important;
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto auto auto !important;
+    gap: 1px !important;
+  }
+  #contatti .contact-channels-polished .channel-card span,
+  #contatti .contact-channels-polished .channel-card strong,
+  #contatti .contact-channels-polished .channel-card small{
+    grid-column: 1 !important;
+    grid-row: auto !important;
+  }
+  #contatti .contact-channels-polished .channel-card strong,
+  #contatti .contact-channels-polished .channel-primary strong,
+  #contatti .contact-channels-polished .channel-value-phone{
+    font-size: clamp(17px, 5.15vw, 20px) !important;
+    white-space: nowrap !important;
+  }
+  #contatti .contact-channels-polished .channel-value-mail,
+  #contatti .contact-channels-polished .channel-value-social,
+  #contatti .contact-channels-polished .channel-card[href^="mailto:"] strong,
+  #contatti .contact-channels-polished .channel-card[href*="instagram"] strong{
+    font-size: clamp(14px, 4.1vw, 17px) !important;
+  }
+  #contatti .channel-value-phone i{
+    width: 21px;
+    height: 21px;
+    margin-right: 6px;
+    font-size: 8.5px;
+    vertical-align: 2px;
+  }
+}
+
+/* === Refinement finale: da "Chi sono" in giù più compatto, leggero e uniforme === */
+:root{
+  --fine-soft-panel: rgba(251,247,241,.50);
+  --fine-soft-panel-strong: rgba(251,247,241,.68);
+}
+
+/* Ripristina la nota dei percorsi in forma più editoriale, non divisa in due colonne. */
+#percorsi .path-insight{
+  max-width: 760px !important;
+  margin: 0 auto 24px !important;
+  padding: 20px 26px !important;
+  display: block !important;
+  text-align: center !important;
+  border-radius: 24px !important;
+  background: rgba(251,247,241,.46) !important;
+  border: 1px solid rgba(36,29,21,.075) !important;
+  box-shadow: 0 10px 28px rgba(36,29,21,.035) !important;
+}
+#percorsi .path-insight strong{
+  font-size: clamp(29px, 3vw, 42px) !important;
+  line-height: 1 !important;
+}
+#percorsi .path-insight p{
+  max-width: 560px !important;
+  margin: 10px auto 0 !important;
+  font-size: 14.5px !important;
+  line-height: 1.58 !important;
+}
+
+/* Chi sono: titolo e testi meno importanti visivamente, card più asciutta. */
+#chisono.about{
+  padding-top: clamp(38px, 5vw, 62px) !important;
+  padding-bottom: clamp(58px, 6.5vw, 82px) !important;
+  gap: clamp(28px, 5vw, 64px) !important;
+}
+#chisono .about-media-sticky{
+  border-radius: 36px !important;
+}
+#chisono .about-media-sticky img{
+  height: min(650px, calc(100vh - 150px)) !important;
+  min-height: 500px !important;
+}
+#chisono .about-copy-card{
+  padding: clamp(24px, 3.2vw, 38px) !important;
+  border-radius: 34px !important;
+  background: rgba(251,247,241,.34) !important;
+  box-shadow: 0 16px 44px rgba(36,29,21,.055) !important;
+}
+#chisono .about-copy-card h2{
+  margin-bottom: 16px !important;
+  font-size: clamp(38px, 4.1vw, 58px) !important;
+  line-height: .98 !important;
+  letter-spacing: -.04em !important;
+}
+#chisono .about-lead{
+  margin-bottom: 20px !important;
+  max-width: 680px !important;
+  font-size: clamp(25px, 2.55vw, 37px) !important;
+  line-height: 1.08 !important;
+  letter-spacing: -.028em !important;
+}
+#chisono .about-pillars{
+  gap: 10px !important;
+  margin: 20px 0 16px !important;
+}
+#chisono .about-pillars article{
+  min-height: 150px !important;
+  padding: 18px !important;
+  border-radius: 23px !important;
+  background: rgba(251,247,241,.46) !important;
+  box-shadow: 0 10px 28px rgba(36,29,21,.035) !important;
+}
+#chisono .about-pillars span{
+  margin-bottom: 15px !important;
+  font-size: 9.5px !important;
+}
+#chisono .about-pillars strong{
+  font-size: clamp(27px, 2.35vw, 35px) !important;
+  line-height: .98 !important;
+}
+#chisono .about-pillars p{
+  margin-top: 10px !important;
+  font-size: 13px !important;
+  line-height: 1.48 !important;
+}
+#chisono .about-disclosures{
+  gap: 9px !important;
+  margin-top: 16px !important;
+}
+#chisono .about-detail{
+  border-radius: 22px !important;
+  background: rgba(251,247,241,.52) !important;
+  box-shadow: none !important;
+}
+#chisono .about-detail summary{
+  min-height: 58px !important;
+  padding: 0 17px 0 19px !important;
+  font-size: clamp(23px, 2.25vw, 31px) !important;
+  letter-spacing: -.024em !important;
+}
+#chisono .about-detail summary i{
+  width: 31px !important;
+  height: 31px !important;
+  flex-basis: 31px !important;
+}
+#chisono .about-detail summary i::before,
+#chisono .about-detail summary i::after{
+  width: 12px !important;
+}
+#chisono .about-detail-body{
+  padding: 0 19px 20px !important;
+}
+#chisono .about-detail-body p{
+  margin-top: 14px !important;
+  font-size: 14.5px !important;
+  line-height: 1.66 !important;
+}
+#chisono .training-tags{
+  gap: 8px !important;
+  padding-top: 18px !important;
+}
+#chisono .training-tags li{
+  padding: 8px 11px !important;
+  font-size: 12px !important;
+}
+#chisono .about-quote{
+  margin-top: 14px !important;
+  padding: 18px 20px !important;
+  border-radius: 22px !important;
+  background: rgba(251,247,241,.58) !important;
+  border: 1px solid rgba(36,29,21,.085) !important;
+  color: rgba(36,29,21,.84) !important;
+  box-shadow: none !important;
+  font-size: clamp(21px, 2.15vw, 29px) !important;
+  line-height: 1.14 !important;
+  letter-spacing: -.028em !important;
+}
+
+/* Sezioni successive: meno altezza e titoli più fini, senza cambiare struttura. */
+.gallery-section.studio-movement{
+  padding-top: clamp(50px, 5.5vw, 72px) !important;
+  padding-bottom: 8px !important;
+}
+.gallery-section.studio-movement .gallery-head{
+  margin-bottom: 24px !important;
+}
+.gallery-section.studio-movement .gallery-head h2,
+.reviews .center-heading h2{
+  font-size: clamp(35px, 4.2vw, 58px) !important;
+  line-height: 1 !important;
+  letter-spacing: -.04em !important;
+}
+.gallery-section.studio-movement .gallery-intro{
+  max-width: 610px !important;
+  font-size: 15px !important;
+  line-height: 1.62 !important;
+  color: rgba(36,29,21,.62) !important;
+}
+.quote-section{
+  padding: clamp(42px, 5vw, 62px) 0 !important;
+}
+.quote-inner{
+  max-width: 860px !important;
+  border-radius: 28px !important;
+  padding: clamp(28px, 4.2vw, 46px) clamp(24px, 6vw, 58px) !important;
+  background: rgba(251,247,241,.54) !important;
+  border: 1px solid rgba(36,29,21,.08) !important;
+  box-shadow: 0 14px 36px rgba(36,29,21,.045) !important;
+}
+.quote-inner p{
+  max-width: 700px !important;
+  font-size: clamp(31px, 4.1vw, 54px) !important;
+  line-height: 1.04 !important;
+  color: rgba(36,29,21,.84) !important;
+}
+.reviews{
+  padding-bottom: clamp(58px, 6vw, 78px) !important;
+}
+.review-card{
+  padding: 24px !important;
+  border-radius: 24px !important;
+  box-shadow: 0 10px 30px rgba(36,29,21,.04) !important;
+}
+.review-card p{
+  font-size: clamp(22px, 2vw, 25px) !important;
+  line-height: 1.18 !important;
+}
+
+/* Contatti: canali in stile icon-list, niente numeri ripetuti o blocchi pesanti. */
+#contatti.contact{
+  padding-bottom: clamp(52px, 6vw, 72px) !important;
+}
+#contatti .contact-polished{
+  max-width: 820px !important;
+  grid-template-columns: minmax(220px,.52fr) minmax(0,.88fr) !important;
+  gap: clamp(20px, 3vw, 34px) !important;
+  padding: clamp(22px, 3vw, 32px) !important;
+  border-radius: 28px !important;
+  background: rgba(251,247,241,.48) !important;
+  border: 1px solid rgba(36,29,21,.075) !important;
+  box-shadow: 0 14px 38px rgba(36,29,21,.045) !important;
+}
+#contatti .contact-panel-simple::before,
+#contatti .contact-panel-simple::after{
+  opacity: .08 !important;
+}
+#contatti .contact-headline h2{
+  max-width: 300px !important;
+  margin-bottom: 12px !important;
+  font-size: clamp(35px, 3.65vw, 50px) !important;
+  line-height: 1 !important;
+}
+#contatti .contact-headline p:not(.eyebrow){
+  max-width: 320px !important;
+  font-size: 14px !important;
+  line-height: 1.58 !important;
+  color: rgba(36,29,21,.64) !important;
+}
+#contatti .contact-channels-minimal{
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0,1fr)) !important;
+  gap: 8px !important;
+  overflow: visible !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+#contatti .contact-channels-minimal .channel-card,
+#contatti .contact-channels-minimal .channel-primary,
+#contatti .contact-channels-minimal .channel-wide{
+  min-height: 62px !important;
+  padding: 12px 13px !important;
+  border: 1px solid rgba(36,29,21,.075) !important;
+  border-radius: 18px !important;
+  background: rgba(251,247,241,.56) !important;
+  box-shadow: 0 8px 22px rgba(36,29,21,.035) !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 11px !important;
+  color: rgba(36,29,21,.86) !important;
+  transform: none !important;
+}
+#contatti .contact-channels-minimal .channel-whatsapp{
+  background: rgba(251,247,241,.68) !important;
+}
+#contatti .contact-channels-minimal .channel-card:hover{
+  background: rgba(255,255,255,.44) !important;
+  box-shadow: 0 10px 24px rgba(36,29,21,.045) !important;
+  transform: translateY(-1px) !important;
+}
+#contatti .contact-channels-minimal .channel-icon{
+  flex: 0 0 32px !important;
+  width: 32px !important;
+  height: 32px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 999px !important;
+  background: rgba(123,87,72,.10) !important;
+  border: 1px solid rgba(123,87,72,.13) !important;
+  color: rgba(94,63,52,.82) !important;
+  font-family: var(--sans) !important;
+  font-size: 10px !important;
+  font-weight: 850 !important;
+  line-height: 1 !important;
+  letter-spacing: .02em !important;
+}
+#contatti .contact-channels-minimal .channel-facebook .channel-icon{
+  font-family: var(--serif) !important;
+  font-size: 18px !important;
+  font-weight: 500 !important;
+}
+#contatti .contact-channels-minimal .channel-copy{
+  min-width: 0 !important;
+  display: grid !important;
+  gap: 2px !important;
+  grid-template-columns: 1fr !important;
+  grid-template-rows: auto auto !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  letter-spacing: normal !important;
+  color: inherit !important;
+}
+#contatti .contact-channels-minimal .channel-copy strong,
+#contatti .contact-channels-minimal .channel-card strong,
+#contatti .contact-channels-minimal .channel-primary strong{
+  grid-column: auto !important;
+  grid-row: auto !important;
+  margin: 0 !important;
+  font-family: var(--sans) !important;
+  font-size: 14px !important;
+  font-weight: 820 !important;
+  line-height: 1.16 !important;
+  letter-spacing: .01em !important;
+  color: rgba(36,29,21,.84) !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+#contatti .contact-channels-minimal .channel-copy small,
+#contatti .contact-channels-minimal .channel-card small,
+#contatti .contact-channels-minimal .channel-primary small{
+  grid-column: auto !important;
+  grid-row: auto !important;
+  margin: 0 !important;
+  font-size: 11.5px !important;
+  line-height: 1.28 !important;
+  color: rgba(36,29,21,.52) !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+@media (max-width: 1080px){
+  #chisono .about-pillars{
+    grid-template-columns: repeat(3, minmax(0,1fr)) !important;
+  }
+  #chisono .about-pillars article{
+    min-height: 142px !important;
+  }
+}
+
+@media (max-width: 980px){
+  #chisono.about{
+    grid-template-columns: 1fr !important;
+  }
+  #chisono .about-media-sticky{
+    position: relative !important;
+    top: auto !important;
+  }
+  #chisono .about-media-sticky img{
+    height: 540px !important;
+    min-height: 0 !important;
+  }
+  #contatti .contact-polished{
+    max-width: 720px !important;
+    grid-template-columns: 1fr !important;
+  }
+  #contatti .contact-headline h2,
+  #contatti .contact-headline p:not(.eyebrow){
+    max-width: 560px !important;
+  }
+}
+
+@media (max-width: 760px){
+  #chisono .about-pillars{
+    grid-template-columns: 1fr !important;
+  }
+  #chisono .about-pillars article{
+    min-height: auto !important;
+  }
+}
+
+@media (max-width: 620px){
+  #percorsi .path-insight{
+    padding: 17px 18px !important;
+    text-align: center !important;
+  }
+  #percorsi .path-insight strong{
+    font-size: clamp(27px, 8.5vw, 34px) !important;
+  }
+  #chisono.about{
+    padding-top: 44px !important;
+    padding-bottom: 58px !important;
+  }
+  #chisono .about-copy-card{
+    padding: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+  #chisono .about-copy-card h2{
+    font-size: clamp(36px, 10vw, 46px) !important;
+  }
+  #chisono .about-lead{
+    font-size: clamp(25px, 7.5vw, 32px) !important;
+  }
+  #chisono .about-media-sticky img{
+    height: 470px !important;
+  }
+  #chisono .about-detail summary{
+    min-height: 56px !important;
+    font-size: 24px !important;
+  }
+  #chisono .about-quote{
+    padding: 17px 18px !important;
+    font-size: clamp(21px, 6.1vw, 27px) !important;
+  }
+  .gallery-section.studio-movement{
+    padding-top: 46px !important;
+  }
+  .gallery-section.studio-movement .gallery-head h2,
+  .reviews .center-heading h2{
+    font-size: clamp(34px, 9.6vw, 44px) !important;
+  }
+  .quote-section{
+    padding: 38px 0 !important;
+  }
+  .quote-inner{
+    border-radius: 24px !important;
+    padding: 26px 20px !important;
+  }
+  .quote-inner p{
+    font-size: clamp(30px, 8.5vw, 39px) !important;
+  }
+  #contatti .contact-polished{
+    padding: 18px !important;
+    border-radius: 24px !important;
+    gap: 17px !important;
+  }
+  #contatti .contact-headline h2{
+    font-size: clamp(34px, 9.8vw, 42px) !important;
+  }
+  #contatti .contact-channels-minimal{
+    grid-template-columns: 1fr !important;
+    gap: 7px !important;
+  }
+  #contatti .contact-channels-minimal .channel-card,
+  #contatti .contact-channels-minimal .channel-primary,
+  #contatti .contact-channels-minimal .channel-wide{
+    min-height: 58px !important;
+    padding: 11px 12px !important;
+    border-radius: 16px !important;
+  }
+}
+
+/* Micro-fix layout icon-list contatti: evita che le regole precedenti dei <span> incidano sulla nuova struttura. */
+#contatti .contact-channels-minimal .channel-copy{
+  flex: 1 1 auto !important;
+  align-self: center !important;
+}
+
+/* === Override finale contatti: minimale, coerente, raffinato === */
+#contatti.contact{
+  padding-bottom: clamp(52px, 5.8vw, 76px) !important;
+}
+
+#contatti .contact-polished{
+  max-width: 900px !important;
+  margin-inline: auto !important;
+  grid-template-columns: minmax(210px, .72fr) minmax(0, 1fr) !important;
+  gap: clamp(24px, 4vw, 48px) !important;
+  align-items: center !important;
+  padding: clamp(26px, 4vw, 42px) !important;
+  border-radius: 30px !important;
+  background: rgba(251,247,241,.58) !important;
+  border: 1px solid rgba(36,29,21,.075) !important;
+  box-shadow: 0 18px 52px rgba(36,29,21,.06) !important;
+}
+
+#contatti .contact-panel-simple::before,
+#contatti .contact-panel-simple::after{
+  opacity: .10 !important;
+}
+
+#contatti .contact-headline .eyebrow{
+  margin-bottom: 10px !important;
+  font-family: var(--sans) !important;
+  font-size: 11px !important;
+  letter-spacing: .20em !important;
+  font-weight: 700 !important;
+  color: rgba(123,87,72,.70) !important;
+}
+
+#contatti .contact-headline h2{
+  max-width: 320px !important;
+  margin: 0 0 16px !important;
+  font-family: var(--serif) !important;
+  font-size: clamp(40px, 4.3vw, 58px) !important;
+  line-height: .98 !important;
+  font-weight: 500 !important;
+  letter-spacing: -.04em !important;
+  color: rgba(80,54,45,.95) !important;
+}
+
+#contatti .contact-headline p:not(.eyebrow){
+  max-width: 345px !important;
+  margin: 0 !important;
+  font-family: var(--sans) !important;
+  font-size: 14.5px !important;
+  line-height: 1.65 !important;
+  font-weight: 400 !important;
+  color: rgba(36,29,21,.61) !important;
+}
+
+#contatti .contact-channels-minimal{
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0,1fr)) !important;
+  gap: 10px !important;
+  overflow: visible !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+#contatti .contact-channels-minimal .channel-card,
+#contatti .contact-channels-minimal .channel-primary,
+#contatti .contact-channels-minimal .channel-wide{
+  display: flex !important;
+  grid-template-columns: none !important;
+  grid-template-rows: none !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 12px !important;
+  min-height: 60px !important;
+  padding: 11px 14px !important;
+  border-radius: 999px !important;
+  border: 1px solid rgba(36,29,21,.075) !important;
+  background: rgba(251,247,241,.52) !important;
+  box-shadow: none !important;
+  color: var(--ink) !important;
+  transform: none !important;
+}
+
+#contatti .contact-channels-minimal .channel-card:last-child{
+  grid-column: 1 / -1 !important;
+  max-width: calc(50% - 5px) !important;
+  border-bottom: 1px solid rgba(36,29,21,.075) !important;
+}
+
+#contatti .contact-channels-minimal .channel-card:hover,
+#contatti .contact-channels-minimal .channel-primary:hover{
+  background: rgba(251,247,241,.78) !important;
+  border-color: rgba(123,87,72,.16) !important;
+  box-shadow: 0 10px 24px rgba(36,29,21,.045) !important;
+  transform: translateY(-1px) !important;
+}
+
+#contatti .contact-channels-minimal .channel-icon{
+  flex: 0 0 32px !important;
+  width: 32px !important;
+  height: 32px !important;
+  display: inline-grid !important;
+  place-items: center !important;
+  border-radius: 50% !important;
+  border: 1px solid rgba(123,87,72,.14) !important;
+  background: rgba(174,142,123,.095) !important;
+  font-family: var(--sans) !important;
+  font-size: 9px !important;
+  line-height: 1 !important;
+  font-weight: 700 !important;
+  letter-spacing: .08em !important;
+  text-transform: uppercase !important;
+  color: rgba(123,87,72,.74) !important;
+  grid-column: auto !important;
+  grid-row: auto !important;
+  align-self: center !important;
+}
+
+#contatti .contact-channels-minimal .channel-phone .channel-icon{
+  font-size: 12px !important;
+  letter-spacing: 0 !important;
+}
+
+#contatti .contact-channels-minimal .channel-copy{
+  min-width: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  gap: 1px !important;
+  flex: 1 1 auto !important;
+  align-self: center !important;
+  grid-column: auto !important;
+  grid-row: auto !important;
+}
+
+#contatti .contact-channels-minimal .channel-card strong,
+#contatti .contact-channels-minimal .channel-primary strong,
+#contatti .contact-channels-minimal .channel-card[href^="tel"] strong,
+#contatti .contact-channels-minimal .channel-card[href^="mailto:"] strong,
+#contatti .contact-channels-minimal .channel-card[href*="instagram"] strong{
+  display: block !important;
+  margin: 0 !important;
+  font-family: var(--serif) !important;
+  font-size: clamp(19px, 1.55vw, 23px) !important;
+  line-height: 1 !important;
+  font-weight: 500 !important;
+  letter-spacing: -.025em !important;
+  text-transform: none !important;
+  color: rgba(36,29,21,.88) !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  grid-column: auto !important;
+  grid-row: auto !important;
+}
+
+#contatti .contact-channels-minimal .channel-card small,
+#contatti .contact-channels-minimal .channel-primary small{
+  display: block !important;
+  margin: 0 !important;
+  font-family: var(--sans) !important;
+  font-size: 10.5px !important;
+  line-height: 1.2 !important;
+  font-weight: 500 !important;
+  letter-spacing: .02em !important;
+  text-transform: none !important;
+  color: rgba(36,29,21,.46) !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  grid-column: auto !important;
+  grid-row: auto !important;
+}
+
+/* Più minimal: le descrizioni restano solo dove aggiungono informazione concreta. */
+#contatti .channel-whatsapp small,
+#contatti .channel-email small,
+#contatti .channel-instagram small,
+#contatti .channel-facebook small{
+  display: none !important;
+}
+
+#contatti .channel-phone small{
+  font-variant-numeric: lining-nums tabular-nums !important;
+  font-feature-settings: "lnum" 1, "tnum" 1 !important;
+  letter-spacing: .06em !important;
+}
+
+@media (max-width: 980px){
+  #contatti .contact-polished{
+    max-width: 760px !important;
+    grid-template-columns: 1fr !important;
+    gap: 22px !important;
+  }
+  #contatti .contact-headline h2,
+  #contatti .contact-headline p:not(.eyebrow){
+    max-width: 560px !important;
+  }
+}
+
+@media (max-width: 620px){
+  #contatti.contact{
+    padding-bottom: 58px !important;
+  }
+  #contatti .contact-polished{
+    padding: 20px !important;
+    border-radius: 24px !important;
+    gap: 18px !important;
+  }
+  #contatti .contact-headline h2{
+    font-size: clamp(36px, 9.5vw, 43px) !important;
+    margin-bottom: 12px !important;
+  }
+  #contatti .contact-headline p:not(.eyebrow){
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+  }
+  #contatti .contact-channels-minimal{
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+  #contatti .contact-channels-minimal .channel-card,
+  #contatti .contact-channels-minimal .channel-primary,
+  #contatti .contact-channels-minimal .channel-wide,
+  #contatti .contact-channels-minimal .channel-card:last-child{
+    max-width: none !important;
+    grid-column: auto !important;
+    min-height: 54px !important;
+    padding: 10px 12px !important;
+    border-radius: 999px !important;
+  }
+  #contatti .contact-channels-minimal .channel-icon{
+    flex-basis: 30px !important;
+    width: 30px !important;
+    height: 30px !important;
+  }
+  #contatti .contact-channels-minimal .channel-card strong,
+  #contatti .contact-channels-minimal .channel-primary strong,
+  #contatti .contact-channels-minimal .channel-card[href^="tel"] strong,
+  #contatti .contact-channels-minimal .channel-card[href^="mailto:"] strong,
+  #contatti .contact-channels-minimal .channel-card[href*="instagram"] strong{
+    font-size: 21px !important;
+  }
+}
+
+/* === Correzione contatti: più larga, omogenea, moderna e allineata === */
+#contatti.contact{
+  width: var(--container) !important;
+  padding-top: clamp(34px, 4.5vw, 58px) !important;
+  padding-bottom: clamp(62px, 7vw, 94px) !important;
+}
+
+#contatti .contact-polished{
+  width: 100% !important;
+  max-width: none !important;
+  margin-inline: auto !important;
+  display: grid !important;
+  grid-template-columns: minmax(280px, .7fr) minmax(0, 1fr) !important;
+  gap: clamp(36px, 5vw, 72px) !important;
+  align-items: center !important;
+  padding: clamp(34px, 4.8vw, 58px) clamp(32px, 5.4vw, 70px) !important;
+  border-radius: clamp(30px, 4.2vw, 46px) !important;
+  background:
+    radial-gradient(circle at 14% 8%, rgba(251,247,241,.72), transparent 34%),
+    linear-gradient(135deg, rgba(251,247,241,.70), rgba(230,221,209,.48)) !important;
+  border: 1px solid rgba(36,29,21,.075) !important;
+  box-shadow: 0 22px 62px rgba(36,29,21,.075) !important;
+}
+
+#contatti .contact-panel-simple::before,
+#contatti .contact-panel-simple::after{
+  opacity: .06 !important;
+}
+
+#contatti .contact-headline{
+  align-self: center !important;
+}
+
+#contatti .contact-headline .eyebrow{
+  margin-bottom: 12px !important;
+  font-family: var(--sans) !important;
+  font-size: 11px !important;
+  line-height: 1 !important;
+  font-weight: 700 !important;
+  letter-spacing: .22em !important;
+  text-transform: uppercase !important;
+  color: rgba(123,87,72,.70) !important;
+}
+
+#contatti .contact-headline h2{
+  max-width: 360px !important;
+  margin: 0 0 18px !important;
+  font-family: var(--serif) !important;
+  font-size: clamp(42px, 4.7vw, 66px) !important;
+  line-height: .94 !important;
+  font-weight: 500 !important;
+  letter-spacing: -.04em !important;
+  color: rgba(80,54,45,.96) !important;
+}
+
+#contatti .contact-headline p:not(.eyebrow){
+  max-width: 390px !important;
+  margin: 0 !important;
+  font-family: var(--sans) !important;
+  font-size: 14.5px !important;
+  line-height: 1.72 !important;
+  font-weight: 400 !important;
+  color: rgba(36,29,21,.62) !important;
+}
+
+#contatti .contact-channels-minimal{
+  width: 100% !important;
+  display: grid !important;
+  grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+  gap: 12px !important;
+  align-content: center !important;
+  align-items: stretch !important;
+  overflow: visible !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+#contatti .contact-channels-minimal .channel-card,
+#contatti .contact-channels-minimal .channel-primary,
+#contatti .contact-channels-minimal .channel-wide,
+#contatti .contact-channels-minimal .channel-card:last-child{
+  width: 100% !important;
+  max-width: none !important;
+  min-width: 0 !important;
+  min-height: 76px !important;
+  grid-column: span 2 !important;
+  display: grid !important;
+  grid-template-columns: 38px minmax(0, 1fr) !important;
+  align-items: center !important;
+  justify-content: start !important;
+  gap: 13px !important;
+  padding: 15px 16px !important;
+  border-radius: 22px !important;
+  border: 1px solid rgba(36,29,21,.075) !important;
+  background: rgba(251,247,241,.50) !important;
+  box-shadow: none !important;
+  color: var(--ink) !important;
+  text-align: left !important;
+  transform: none !important;
+}
+
+#contatti .contact-channels-minimal .channel-instagram{
+  grid-column: 2 / span 2 !important;
+}
+
+#contatti .contact-channels-minimal .channel-facebook{
+  grid-column: 4 / span 2 !important;
+}
+
+#contatti .contact-channels-minimal .channel-card:hover,
+#contatti .contact-channels-minimal .channel-primary:hover{
+  background: rgba(251,247,241,.78) !important;
+  border-color: rgba(123,87,72,.18) !important;
+  box-shadow: 0 12px 28px rgba(36,29,21,.055) !important;
+  transform: translateY(-1px) !important;
+}
+
+#contatti .contact-channels-minimal .channel-icon{
+  width: 38px !important;
+  height: 38px !important;
+  min-width: 38px !important;
+  display: inline-grid !important;
+  place-items: center !important;
+  border-radius: 999px !important;
+  border: 1px solid rgba(123,87,72,.13) !important;
+  background: rgba(174,142,123,.075) !important;
+  color: rgba(123,87,72,.70) !important;
+  grid-column: auto !important;
+  grid-row: auto !important;
+  align-self: center !important;
+}
+
+#contatti .contact-channels-minimal .channel-icon svg{
+  width: 18px !important;
+  height: 18px !important;
+  display: block !important;
+  fill: none !important;
+  stroke: currentColor !important;
+  stroke-width: 1.65 !important;
+  stroke-linecap: round !important;
+  stroke-linejoin: round !important;
+}
+
+#contatti .contact-channels-minimal .channel-whatsapp .channel-icon svg path,
+#contatti .contact-channels-minimal .channel-facebook .channel-icon svg path{
+  fill: currentColor !important;
+  stroke: none !important;
+}
+
+#contatti .contact-channels-minimal .channel-copy{
+  min-width: 0 !important;
+  width: 100% !important;
+  display: grid !important;
+  gap: 4px !important;
+  justify-items: start !important;
+  align-items: center !important;
+  text-align: left !important;
+  flex: initial !important;
+  align-self: center !important;
+  grid-column: auto !important;
+  grid-row: auto !important;
+}
+
+#contatti .contact-channels-minimal .channel-card strong,
+#contatti .contact-channels-minimal .channel-primary strong,
+#contatti .contact-channels-minimal .channel-card[href^="tel"] strong,
+#contatti .contact-channels-minimal .channel-card[href^="mailto:"] strong,
+#contatti .contact-channels-minimal .channel-card[href*="instagram"] strong{
+  display: block !important;
+  width: 100% !important;
+  margin: 0 !important;
+  font-family: var(--sans) !important;
+  font-size: 12px !important;
+  line-height: 1.1 !important;
+  font-weight: 800 !important;
+  letter-spacing: .12em !important;
+  text-transform: uppercase !important;
+  color: rgba(36,29,21,.76) !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  text-align: left !important;
+  grid-column: auto !important;
+  grid-row: auto !important;
+}
+
+#contatti .contact-channels-minimal .channel-card small,
+#contatti .contact-channels-minimal .channel-primary small{
+  display: block !important;
+  width: 100% !important;
+  margin: 0 !important;
+  font-family: var(--sans) !important;
+  font-size: 11px !important;
+  line-height: 1.25 !important;
+  font-weight: 500 !important;
+  letter-spacing: .01em !important;
+  text-transform: none !important;
+  color: rgba(36,29,21,.48) !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  text-align: left !important;
+  grid-column: auto !important;
+  grid-row: auto !important;
+}
+
+#contatti .channel-phone small{
+  font-variant-numeric: lining-nums tabular-nums !important;
+  font-feature-settings: "lnum" 1, "tnum" 1 !important;
+  letter-spacing: .045em !important;
+}
+
+@media (max-width: 980px){
+  #contatti.contact{
+    width: var(--container) !important;
+  }
+  #contatti .contact-polished{
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+    padding: clamp(28px, 5vw, 42px) !important;
+  }
+  #contatti .contact-headline h2,
+  #contatti .contact-headline p:not(.eyebrow){
+    max-width: 620px !important;
+  }
+  #contatti .contact-channels-minimal{
+    grid-template-columns: repeat(2, minmax(0,1fr)) !important;
+  }
+  #contatti .contact-channels-minimal .channel-card,
+  #contatti .contact-channels-minimal .channel-primary,
+  #contatti .contact-channels-minimal .channel-wide,
+  #contatti .contact-channels-minimal .channel-card:last-child,
+  #contatti .contact-channels-minimal .channel-instagram,
+  #contatti .contact-channels-minimal .channel-facebook{
+    grid-column: auto !important;
+  }
+}
+
+@media (max-width: 620px){
+  #contatti.contact{
+    padding-top: 32px !important;
+    padding-bottom: 58px !important;
+  }
+  #contatti .contact-polished{
+    padding: 22px !important;
+    border-radius: 26px !important;
+    gap: 20px !important;
+  }
+  #contatti .contact-headline h2{
+    font-size: clamp(36px, 10vw, 46px) !important;
+    margin-bottom: 12px !important;
+  }
+  #contatti .contact-headline p:not(.eyebrow){
+    font-size: 14px !important;
+    line-height: 1.62 !important;
+  }
+  #contatti .contact-channels-minimal{
+    grid-template-columns: 1fr !important;
+    gap: 9px !important;
+  }
+  #contatti .contact-channels-minimal .channel-card,
+  #contatti .contact-channels-minimal .channel-primary,
+  #contatti .contact-channels-minimal .channel-wide,
+  #contatti .contact-channels-minimal .channel-card:last-child,
+  #contatti .contact-channels-minimal .channel-instagram,
+  #contatti .contact-channels-minimal .channel-facebook{
+    grid-column: auto !important;
+    min-height: 58px !important;
+    padding: 11px 13px !important;
+    border-radius: 18px !important;
+  }
+  #contatti .contact-channels-minimal .channel-card strong,
+  #contatti .contact-channels-minimal .channel-primary strong,
+  #contatti .contact-channels-minimal .channel-card[href^="tel"] strong,
+  #contatti .contact-channels-minimal .channel-card[href^="mailto:"] strong,
+  #contatti .contact-channels-minimal .channel-card[href*="instagram"] strong{
+    font-size: 12px !important;
+    letter-spacing: .11em !important;
+  }
+}
+
+
+/* =========================================================
+   Contact section — clean final layout
+   Scope: only #contatti. Keeps the rest of the website unchanged.
+   ========================================================= */
+#contatti.contact-clean{
+  width: var(--container);
+  margin-inline: auto;
+  padding: clamp(54px, 7vw, 86px) 0 clamp(70px, 8vw, 104px);
+}
+
+#contatti .contact-panel-clean{
+  width: 100%;
+  max-width: 1120px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: minmax(280px, .84fr) minmax(420px, 1.16fr);
+  gap: clamp(38px, 6vw, 78px);
+  align-items: center;
+  padding: clamp(42px, 5.4vw, 68px) clamp(38px, 5.8vw, 72px);
+  border-radius: clamp(28px, 4vw, 42px);
+  border: 1px solid rgba(36,29,21,.10);
+  background:
+    radial-gradient(circle at 0% 0%, rgba(255,255,255,.72), transparent 46%),
+    linear-gradient(135deg, rgba(251,247,241,.78), rgba(247,241,233,.50));
+  box-shadow: 0 22px 64px rgba(36,29,21,.085);
+}
+
+#contatti .contact-panel-clean::before,
+#contatti .contact-panel-clean::after{
+  content: none !important;
+}
+
+#contatti .contact-copy-clean{
+  max-width: 430px;
+}
+
+#contatti .contact-copy-clean .eyebrow{
+  margin-bottom: 14px;
+  font-family: var(--sans);
+  font-size: 11px;
+  line-height: 1;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .22em;
+  color: var(--clay);
+}
+
+#contatti .contact-copy-clean h2{
+  margin: 0;
+  max-width: 390px;
+  font-family: var(--serif);
+  font-size: clamp(46px, 5vw, 68px);
+  font-weight: 500;
+  line-height: .96;
+  letter-spacing: -.035em;
+  color: var(--ink);
+}
+
+#contatti .contact-copy-clean p:not(.eyebrow){
+  margin: 24px 0 0;
+  max-width: 420px;
+  font-family: var(--sans);
+  font-size: 15.5px;
+  line-height: 1.72;
+  color: rgba(36,29,21,.64);
+}
+
+#contatti .contact-list-clean{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  width: 100%;
+  align-items: stretch;
+}
+
+#contatti .contact-row-clean{
+  min-width: 0;
+  min-height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 15px 18px 15px 20px;
+  border-radius: 24px;
+  border: 1px solid rgba(36,29,21,.105);
+  background: rgba(251,247,241,.54);
+  box-shadow: 0 12px 28px rgba(36,29,21,.045);
+  color: var(--ink);
+  text-decoration: none;
+  transition: transform .18s ease, background-color .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+
+#contatti .contact-row-clean:hover{
+  transform: translateY(-1px);
+  background: rgba(251,247,241,.78);
+  border-color: rgba(36,29,21,.16);
+  box-shadow: 0 16px 36px rgba(36,29,21,.07);
+}
+
+#contatti .contact-row-text{
+  min-width: 0;
+  display: grid;
+  gap: 3px;
+  text-align: left;
+}
+
+#contatti .contact-row-text strong{
+  display: block;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: var(--serif);
+  font-size: clamp(24px, 2.1vw, 31px);
+  font-weight: 500;
+  line-height: .96;
+  letter-spacing: -.025em;
+  color: rgba(36,29,21,.92);
+}
+
+#contatti .contact-row-text small{
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: var(--sans);
+  font-size: 11px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: .045em;
+  color: rgba(36,29,21,.54);
+}
+
+#contatti .contact-row-action{
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 66px;
+  min-height: 34px;
+  padding: 0 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(36,29,21,.10);
+  background: rgba(255,255,255,.34);
+  font-family: var(--sans);
+  font-size: 10px;
+  line-height: 1;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .11em;
+  color: rgba(36,29,21,.58);
+}
+
+@media (min-width: 981px){
+  #contatti .contact-row-clean:first-child{
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 980px){
+  #contatti.contact-clean{
+    padding-top: 54px;
+  }
+  #contatti .contact-panel-clean{
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  #contatti .contact-copy-clean{
+    max-width: 620px;
+  }
+  #contatti .contact-copy-clean h2{
+    max-width: 520px;
+  }
+}
+
+@media (max-width: 680px){
+  #contatti.contact-clean{
+    width: var(--container);
+    padding: 42px 0 72px;
+  }
+  #contatti .contact-panel-clean{
+    padding: 30px 20px;
+    border-radius: 30px;
+  }
+  #contatti .contact-copy-clean h2{
+    font-size: clamp(40px, 13vw, 54px);
+  }
+  #contatti .contact-copy-clean p:not(.eyebrow){
+    margin-top: 18px;
+    font-size: 14.5px;
+    line-height: 1.68;
+  }
+  #contatti .contact-list-clean{
+    grid-template-columns: 1fr;
+    gap: 9px;
+  }
+  #contatti .contact-row-clean{
+    min-height: 66px;
+    padding: 13px 13px 13px 16px;
+    border-radius: 20px;
+  }
+  #contatti .contact-row-text strong{
+    font-size: 25px;
+  }
+  #contatti .contact-row-action{
+    min-width: 58px;
+    min-height: 30px;
+    padding-inline: 10px;
+    font-size: 9px;
+    letter-spacing: .09em;
+  }
+}
+
+
+/* =========================================================
+   Patch footer + email leggibile
+   Scope: solo contatti e footer.
+   ========================================================= */
+#contatti .contact-row-clean[href^="mailto:"] .contact-row-text small{
+  max-width: 100%;
+}
+
+#contatti .contact-email-visible{
+  overflow: visible !important;
+  text-overflow: clip !important;
+  white-space: normal !important;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  letter-spacing: 0 !important;
+  font-size: 12px !important;
+  line-height: 1.25 !important;
+  font-weight: 600 !important;
+  color: rgba(36,29,21,.58) !important;
+}
+
+.footer-links a[href^="mailto:"]{
+  display: none !important;
+}
+
+.footer-links a[href^="tel:"]{
+  letter-spacing: .08em;
+}
+
+@media (max-width: 680px){
+  #contatti .contact-row-clean[href^="mailto:"]{
+    align-items: flex-start;
+  }
+  #contatti .contact-row-clean[href^="mailto:"] .contact-row-action{
+    margin-top: 2px;
+  }
+  #contatti .contact-email-visible{
+    font-size: 11.5px !important;
+  }
+}
+
+
+/* =========================================================
+   Patch email testuale + footer pulito
+   Scope: solo sezione contatti e link footer.
+   ========================================================= */
+#contatti .contact-email-note{
+  margin:22px 0 0 !important;
+  max-width:390px;
+  display:grid;
+  gap:5px;
+  padding:0;
+  font-family:var(--sans);
+  color:rgba(36,29,21,.66);
+}
+
+#contatti .contact-email-note span{
+  display:block;
+  font-size:10px;
+  line-height:1;
+  font-weight:800;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--clay);
+}
+
+#contatti .contact-email-note strong{
+  display:block;
+  font-family:var(--sans);
+  font-size:15px;
+  line-height:1.45;
+  font-weight:600;
+  letter-spacing:0;
+  color:rgba(36,29,21,.70);
+  overflow-wrap:anywhere;
+}
+
+@media (min-width:981px){
+  #contatti .contact-row-clean:first-child{
+    grid-column:auto !important;
+  }
+}
+
+.footer-links a[href^="tel:"]{
+  letter-spacing:.11em;
+}
+
+@media (max-width:680px){
+  #contatti .contact-email-note{
+    margin-top:18px !important;
+    max-width:100%;
+  }
+  #contatti .contact-email-note strong{
+    font-size:14px;
+  }
+}
