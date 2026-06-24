@@ -26,6 +26,7 @@
       <span></span><span></span><span></span>
     </button>
     <nav class="site-nav" id="site-nav" aria-label="Navigazione principale">
+      <a href="#metodi">Metodi</a>
       <a href="#percorsi">Percorsi</a>
       <a href="#chisono">Michela</a>
       <a href="#recensioni">Recensioni</a>
@@ -40,14 +41,14 @@
       <div class="hero-inner">
         <div class="hero-copy reveal">
           <p class="eyebrow">Pilates in Testa · Michela Morini</p>
-          <h1>Allenare il corpo.<br>Educare il movimento.</h1>
-          <p class="lead">Ti aiuto a migliorare postura, forza e mobilità attraverso un metodo di Pilates personalizzato, costruito sulle esigenze del tuo corpo.</p>
+          <h1>Allenare il corpo<br>Educare il movimento</h1>
+          <p class="lead">Ti aiuto a migliorare postura, forza e mobilità attraverso un percorso personalizzato di Pilates, costruito sulle esigenze del tuo corpo.</p>
           <div class="hero-meta hero-meta-circles" aria-label="Specializzazioni e percorsi">
-            <span>Pilates</span>
-            <span>Gravidanza e postpartum</span>
-            <span>Riabilitazione pavimento pelvico</span>
-            <span>Pilates Suspension Method</span>
-            <span>JustBarre</span>
+            <a class="method-link" href="#metodi-pilates" data-method-target="pilates">Pilates</a>
+            <a class="method-link" href="#metodi-postpartum" data-method-target="postpartum">Gravidanza e postpartum</a>
+            <a class="method-link" href="#metodi-pavimento-pelvico" data-method-target="pavimento-pelvico">Riabilitazione pavimento pelvico</a>
+            <a class="method-link" href="#metodi-suspension" data-method-target="suspension">Pilates Suspension Method</a>
+            <a class="method-link" href="#metodi-justbarre" data-method-target="justbarre">JustBarre</a>
           </div>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#percorsi">Lezioni online</a>
@@ -68,7 +69,7 @@
     </section>
 
     <section class="statement statement-refined section-shell reveal">
-      <h2>Un percorso che si adatta a te, non il contrario.</h2>
+      <h2>Un percorso che si adatta a te, non il contrario</h2>
       <p>Pilates personalizzato per sviluppare forza, equilibrio e consapevolezza attraverso il movimento.</p>
     </section>
 
@@ -92,34 +93,128 @@
       </div>
     </section>
 
+    <section class="section-shell methods-section" id="metodi">
+      <div class="methods-heading reveal">
+        <p class="eyebrow">Metodi</p>
+        <h2>Scegli il focus del tuo lavoro</h2>
+        <p>Una guida sintetica per orientarti tra i diversi ambiti di pratica. I contenuti sono provvisori e potranno essere personalizzati in un secondo momento.</p>
+      </div>
+
+      <div class="methods-layout reveal" data-methods>
+        <div class="methods-tabs" role="tablist" aria-label="Seleziona un metodo">
+          <button class="method-tab is-active" type="button" role="tab" id="tab-pilates" aria-selected="true" aria-controls="metodi-pilates" data-method="pilates">Pilates</button>
+          <button class="method-tab" type="button" role="tab" id="tab-postpartum" aria-selected="false" aria-controls="metodi-postpartum" data-method="postpartum">Gravidanza e postpartum</button>
+          <button class="method-tab" type="button" role="tab" id="tab-pavimento-pelvico" aria-selected="false" aria-controls="metodi-pavimento-pelvico" data-method="pavimento-pelvico">Riabilitazione pavimento pelvico</button>
+          <button class="method-tab" type="button" role="tab" id="tab-suspension" aria-selected="false" aria-controls="metodi-suspension" data-method="suspension">Pilates Suspension Method</button>
+          <button class="method-tab" type="button" role="tab" id="tab-justbarre" aria-selected="false" aria-controls="metodi-justbarre" data-method="justbarre">JustBarre</button>
+        </div>
+
+        <div class="methods-panels">
+          <article class="method-panel is-active" id="metodi-pilates" role="tabpanel" aria-labelledby="tab-pilates" data-method-panel="pilates">
+            <div class="method-copy">
+              <p class="method-kicker">Metodo</p>
+              <h3>Pilates</h3>
+              <p>Un lavoro progressivo su postura, forza, mobilità e controllo. La lezione viene costruita sulle necessità della persona, con attenzione alla qualità del movimento e alla continuità del percorso.</p>
+              <ul>
+                <li>Movimento consapevole e guidato</li>
+                <li>Forza profonda e postura</li>
+                <li>Adattamento al livello di partenza</li>
+              </ul>
+            </div>
+            <figure class="method-visual">
+              <img src="assets/img/detail-mat.webp" alt="Dettaglio pratica Pilates sul tappetino">
+            </figure>
+          </article>
+
+          <article class="method-panel" id="metodi-postpartum" role="tabpanel" aria-labelledby="tab-postpartum" data-method-panel="postpartum" hidden>
+            <div class="method-copy">
+              <p class="method-kicker">Metodo</p>
+              <h3>Gravidanza e postpartum</h3>
+              <p>Un percorso delicato e personalizzato per accompagnare il corpo nelle fasi di cambiamento. Respiro, ascolto e movimento aiutano a ritrovare stabilità, fiducia e presenza.</p>
+              <ul>
+                <li>Lavoro rispettoso dei tempi del corpo</li>
+                <li>Attenzione a respiro e postura</li>
+                <li>Progressione graduale e sicura</li>
+              </ul>
+            </div>
+            <figure class="method-visual">
+              <img src="assets/img/detail-breath.webp" alt="Dettaglio respiro e movimento Pilates">
+            </figure>
+          </article>
+
+          <article class="method-panel" id="metodi-pavimento-pelvico" role="tabpanel" aria-labelledby="tab-pavimento-pelvico" data-method-panel="pavimento-pelvico" hidden>
+            <div class="method-copy">
+              <p class="method-kicker">Metodo</p>
+              <h3>Riabilitazione pavimento pelvico</h3>
+              <p>Un lavoro mirato sulla consapevolezza del bacino, sulla respirazione e sulla gestione del movimento. Ogni proposta viene modulata in base alle esigenze e agli obiettivi individuali.</p>
+              <ul>
+                <li>Educazione al movimento e al respiro</li>
+                <li>Percezione e controllo del bacino</li>
+                <li>Approccio graduale e personalizzato</li>
+              </ul>
+            </div>
+            <figure class="method-visual">
+              <img src="assets/img/detail-pelvis.webp" alt="Dettaglio anatomia del bacino">
+            </figure>
+          </article>
+
+          <article class="method-panel" id="metodi-suspension" role="tabpanel" aria-labelledby="tab-suspension" data-method-panel="suspension" hidden>
+            <div class="method-copy">
+              <p class="method-kicker">Metodo</p>
+              <h3>Pilates Suspension Method</h3>
+              <p>Una proposta dinamica che integra il lavoro del Pilates con il supporto in sospensione. Utile per sviluppare controllo, stabilità, coordinazione e forza in modo progressivo.</p>
+              <ul>
+                <li>Stabilità e controllo globale</li>
+                <li>Lavoro dinamico e funzionale</li>
+                <li>Progressioni adattabili</li>
+              </ul>
+            </div>
+            <figure class="method-visual">
+              <img src="assets/img/movement-1.webp" alt="Pratica con attrezzo Pilates">
+            </figure>
+          </article>
+
+          <article class="method-panel" id="metodi-justbarre" role="tabpanel" aria-labelledby="tab-justbarre" data-method-panel="justbarre" hidden>
+            <div class="method-copy">
+              <p class="method-kicker">Metodo</p>
+              <h3>JustBarre</h3>
+              <p>Un lavoro elegante e intenso ispirato alla sbarra, pensato per migliorare tono, allineamento, coordinazione e presenza del corpo. La pratica può essere modulata in base al livello.</p>
+              <ul>
+                <li>Controllo, ritmo e precisione</li>
+                <li>Tono muscolare e allineamento</li>
+                <li>Energia e fluidità del movimento</li>
+              </ul>
+            </div>
+            <figure class="method-visual">
+              <img src="assets/img/ascolto.webp" alt="Esercizio alla sbarra">
+            </figure>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="section-shell cards-section" id="percorsi">
       <div class="center-heading reveal">
         <p class="eyebrow">Percorsi</p>
-        <h2>Un percorso che si adatta a te, non il contrario.</h2>
+        <h2>Non esistono soluzioni uguali per tutti: ogni percorso è unico, proprio come te</h2>
       </div>
       <div class="path-insight reveal">
-        <strong>Ogni percorso nasce dall'ascolto.</strong>
         <p>Obiettivi, esigenze e possibilità reali della persona diventano il punto di partenza della lezione.</p>
       </div>
       <div class="cards-grid cards-grid-priority">
         <article class="service-card service-card-online reveal">
-          <span>01</span>
-          <p class="online-kicker">Studio virtuale</p>
           <h3>Online</h3>
           <p>Lezioni in diretta ovunque tu sia. Un percorso personalizzato con guida costante, correzioni e continuità nel lavoro sul corpo.</p>
         </article>
         <article class="service-card reveal">
-          <span>02</span>
           <h3>Individuali</h3>
           <p>Uno spazio dedicato solo a te. Lavoriamo insieme su postura, mobilità, forza e consapevolezza corporea, rispettando il tuo ritmo e i tuoi obiettivi.</p>
         </article>
         <article class="service-card reveal">
-          <span>03</span>
           <h3>Duetti e piccoli gruppi</h3>
           <p>Condividere il percorso può essere stimolante e motivante. Le lezioni mantengono attenzione e personalizzazione, in un contesto dinamico e coinvolgente.</p>
         </article>
         <article class="service-card reveal">
-          <span>04</span>
           <h3>Gravidanza e postpartum</h3>
           <p>Un percorso sicuro e rispettoso dei cambiamenti del corpo. Movimento, respiro e ascolto per accompagnarti durante la gravidanza e nel recupero dopo il parto.</p>
         </article>
@@ -137,68 +232,78 @@
 
         <p class="about-lead">La mia storia nasce dalla danza. Il Pilates è diventato il modo in cui accompagno le persone a ritrovare forza, equilibrio e fiducia nel proprio corpo.</p>
 
-        <div class="about-pillars" aria-label="Sintesi del percorso professionale di Michela Morini">
-          <article>
-            <span>01</span>
-            <strong>Danza</strong>
+        <div class="about-mini-grid" aria-label="Approfondimenti rapidi sul profilo di Michela Morini">
+          <button class="about-mini-card" type="button" data-about-topic="danza" aria-expanded="false" aria-controls="about-overlay-panel">
+            <span class="about-mini-title">Danza</span>
+            <span class="about-mini-plus" aria-hidden="true">+</span>
+          </button>
+          <button class="about-mini-card" type="button" data-about-topic="pilates" aria-expanded="false" aria-controls="about-overlay-panel">
+            <span class="about-mini-title">Pilates</span>
+            <span class="about-mini-plus" aria-hidden="true">+</span>
+          </button>
+          <button class="about-mini-card" type="button" data-about-topic="ascolto" aria-expanded="false" aria-controls="about-overlay-panel">
+            <span class="about-mini-title">Ascolto</span>
+            <span class="about-mini-plus" aria-hidden="true">+</span>
+          </button>
+        </div>
+
+        <div class="about-extra-stack" aria-label="Sezioni compatte espandibili">
+          <button class="about-extra-card" type="button" data-about-topic="storia" aria-expanded="false" aria-controls="about-overlay-panel">
+            <span>Leggi la storia completa</span>
+            <em aria-hidden="true">+</em>
+          </button>
+          <button class="about-extra-card" type="button" data-about-topic="formazione" aria-expanded="false" aria-controls="about-overlay-panel">
+            <span>Formazione e certificazioni</span>
+            <em aria-hidden="true">+</em>
+          </button>
+        </div>
+
+        <p class="about-micro-quote">Ogni fase della vita porta cambiamenti. Il mio lavoro è accompagnarti nel movimento con competenza, ascolto e rispetto per il tuo corpo.</p>
+
+        <div class="about-overlay" id="about-overlay-panel" role="dialog" aria-modal="true" aria-hidden="true" tabindex="-1">
+          <button class="about-overlay-close" type="button" aria-label="Chiudi approfondimento">×</button>
+          <p class="about-overlay-kicker">Approfondimento</p>
+          <h3>Seleziona una voce</h3>
+          <div class="about-overlay-text"></div>
+        </div>
+
+        <div class="about-topic-contents" hidden>
+          <div data-about-content="danza" data-kicker="Danza" data-title="Danza">
             <p>Una formazione professionale nel movimento, nella precisione e nella presenza del corpo.</p>
-          </article>
-          <article>
-            <span>02</span>
-            <strong>Pilates</strong>
+          </div>
+          <div data-about-content="pilates" data-kicker="Pilates" data-title="Pilates">
             <p>Un incontro nato dopo un infortunio e trasformato in metodo, passione e lavoro quotidiano.</p>
-          </article>
-          <article>
-            <span>03</span>
-            <strong>Ascolto</strong>
+          </div>
+          <div data-about-content="ascolto" data-kicker="Ascolto" data-title="Ascolto">
             <p>Ogni percorso viene adattato alla persona, ai suoi obiettivi e al momento di vita che attraversa.</p>
-          </article>
+          </div>
+          <div data-about-content="storia" data-kicker="Storia completa" data-title="La mia storia completa">
+            <p>La mia storia professionale nasce dalla danza. Per anni ho lavorato come ballerina professionista e insegnante di danza, sviluppando una profonda conoscenza del corpo, del movimento e della sua capacità di esprimere forza, equilibrio ed emozione.</p>
+            <p>L'incontro con il Pilates è avvenuto in seguito a un infortunio. Quella che inizialmente era una pratica di recupero si è trasformata in una vera passione e in una nuova strada professionale. Ho scoperto un metodo capace non solo di migliorare la condizione fisica, ma anche di creare una connessione più profonda con il proprio corpo e il proprio benessere.</p>
+            <p>Da questa esperienza è nato il mio modo di insegnare: un approccio che unisce la precisione acquisita attraverso la danza all'ascolto, all'empatia e alla personalizzazione del lavoro.</p>
+            <p>Credo che ogni persona sia unica e che ogni percorso debba essere costruito sulle sue esigenze, sui suoi obiettivi e sul momento di vita che sta attraversando. Per questo ogni lezione viene adattata individualmente, con attenzione e cura.</p>
+            <p>Oggi accompagno persone con esigenze e obiettivi diversi attraverso percorsi personalizzati, aiutandole a sviluppare forza, mobilità, consapevolezza e fiducia nel proprio corpo.</p>
+            <p>Per me il movimento non è ricerca della perfezione, ma uno strumento per stare bene, sentirsi forti e vivere il proprio corpo con maggiore libertà e armonia.</p>
+          </div>
+          <div data-about-content="formazione" data-kicker="Formazione" data-title="Formazione e certificazioni">
+            <ul class="training-tags training-tags-compact">
+              <li>Diploma internazionale di Pilates presso Polestar Pilates</li>
+              <li>Certificazione PSM – Pilates Suspension Method</li>
+              <li>Certificazione Just Barre</li>
+              <li>Formazione specialistica in gravidanza e postpartum</li>
+              <li>Formazione sul pavimento pelvico</li>
+              <li>Movimento adattato all'osteoporosi</li>
+              <li>Precedente formazione e attività professionale nella danza</li>
+            </ul>
+          </div>
         </div>
-
-        <div class="about-disclosures" aria-label="Approfondimenti su Michela Morini">
-          <details class="about-detail">
-            <summary>
-              <span>Leggi la storia completa</span>
-              <i aria-hidden="true"></i>
-            </summary>
-            <div class="about-detail-body">
-              <p>La mia storia professionale nasce dalla danza. Per anni ho lavorato come ballerina professionista e insegnante di danza, sviluppando una profonda conoscenza del corpo, del movimento e della sua capacità di esprimere forza, equilibrio ed emozione.</p>
-              <p>L'incontro con il Pilates è avvenuto in seguito a un infortunio. Quella che inizialmente era una pratica di recupero si è trasformata in una vera passione e in una nuova strada professionale. Ho scoperto un metodo capace non solo di migliorare la condizione fisica, ma anche di creare una connessione più profonda con il proprio corpo e il proprio benessere.</p>
-              <p>Da questa esperienza è nato il mio modo di insegnare: un approccio che unisce la precisione acquisita attraverso la danza all'ascolto, all'empatia e alla personalizzazione del lavoro.</p>
-              <p>Credo che ogni persona sia unica e che ogni percorso debba essere costruito sulle sue esigenze, sui suoi obiettivi e sul momento di vita che sta attraversando. Per questo ogni lezione viene adattata individualmente, con attenzione e cura.</p>
-              <p>Oggi accompagno persone con esigenze e obiettivi diversi attraverso percorsi personalizzati, aiutandole a sviluppare forza, mobilità, consapevolezza e fiducia nel proprio corpo.</p>
-              <p>Per me il movimento non è ricerca della perfezione, ma uno strumento per stare bene, sentirsi forti e vivere il proprio corpo con maggiore libertà e armonia.</p>
-            </div>
-          </details>
-
-          <details class="about-detail training-detail">
-            <summary>
-              <span>Formazione e certificazioni</span>
-              <i aria-hidden="true"></i>
-            </summary>
-            <div class="about-detail-body">
-              <ul class="training-tags">
-                <li>Diploma internazionale di Pilates presso Polestar Pilates</li>
-                <li>Certificazione PSM – Pilates Suspension Method</li>
-                <li>Certificazione Just Barre</li>
-                <li>Formazione specialistica in gravidanza e postpartum</li>
-                <li>Formazione sul pavimento pelvico</li>
-                <li>Movimento adattato all'osteoporosi</li>
-                <li>Precedente formazione e attività professionale nella danza</li>
-              </ul>
-            </div>
-          </details>
-        </div>
-
-        <blockquote class="about-quote">Ogni fase della vita porta cambiamenti. Il mio lavoro è accompagnarti nel movimento con competenza, ascolto e rispetto per il tuo corpo.</blockquote>
       </div>
     </section>
 
     <section class="gallery-section studio-movement" aria-labelledby="studio-movement-title">
       <div class="section-shell gallery-head reveal">
         <p class="eyebrow">Ascolto e movimento</p>
-        <h2 id="studio-movement-title">Ogni percorso nasce dall'ascolto del corpo.</h2>
-        <p class="gallery-intro">Osservazione, esperienza e attenzione guidano un lavoro personalizzato, costruito sulle esigenze e sugli obiettivi di ogni persona.</p>
+        <h2 id="studio-movement-title">Il corpo cambia quando impariamo ad ascoltarlo</h2>
       </div>
       <div class="gallery-row gallery-editorial" aria-label="Galleria ascolto e movimento">
         <figure class="photo-card photo-card-large reveal">
@@ -216,11 +321,6 @@
       </div>
     </section>
 
-    <section class="quote-section">
-      <div class="section-shell quote-inner reveal">
-        <p>“Il corpo cambia quando impariamo ad ascoltarlo.”</p>
-      </div>
-    </section>
 
     <section class="section-shell reviews" id="recensioni">
       <div class="center-heading reveal">
@@ -298,6 +398,7 @@
       <p><b>Il Pilates che parte da te.</b><br>Percorsi personalizzati per ritrovare forza, equilibrio e benessere attraverso il movimento.</p>
     </div>
     <div class="footer-links" aria-label="Collegamenti footer">
+      <a href="#metodi">Metodi</a>
       <a href="#percorsi">Percorsi</a>
       <a href="#recensioni">Recensioni</a>
       <a href="https://wa.me/393384888652?text=Ciao%20Michela%2C%20vorrei%20informazioni%20sulle%20lezioni%20di%20Pilates" target="_blank" rel="noopener">WhatsApp</a>
